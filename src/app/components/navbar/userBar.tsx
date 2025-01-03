@@ -13,11 +13,7 @@ export default function UserBar() {
           <Avatar>
             <AvatarImage src={session.user?.image ?? ''} alt={session.user?.name ?? ''} />
             <AvatarFallback>
-              {session.user?.name?.split(' ')
-                .map(n => n[0])
-                .slice(0, 2)
-                .join('')
-                .toUpperCase() ?? '??'}
+              <span>{session.user?.name?.[0]}</span>
             </AvatarFallback>
           </Avatar>
           <div className="flex flex-col">

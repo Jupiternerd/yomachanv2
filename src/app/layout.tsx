@@ -4,15 +4,6 @@ import "./globals.css";
 import Navbar from "./components/navbar/navBar";
 import Providers from "./components/auth/AuthProvider";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -28,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <Providers>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`antialiased`}
       >
         <Navbar />
         {children}
