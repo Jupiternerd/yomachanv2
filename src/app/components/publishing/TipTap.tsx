@@ -96,6 +96,7 @@ export default function TiptapEditor({
       },
     },
     onUpdate: ({ editor }) => {
+      // Call the onUpdate callback with the current HTML content
       onUpdate?.(editor.getHTML());
     },
   });

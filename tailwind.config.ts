@@ -9,7 +9,15 @@ export default {
   ],
   theme: {
   	extend: {
+		fontFamily: {
+			shippori: "var(--font-shippori)",
+			nun: "var(--font-nun)",
+		},
   		colors: {
+			"main-red": "#E35845",
+			"main-blue": "#3EA1B2",
+			"main-yellow": "#FFBF58",
+			"main-black": "#1F1E29",
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {

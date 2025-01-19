@@ -1,9 +1,19 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Shippori_Mincho, Nunito } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/navbar/navBar";
 import Providers from "./components/auth/AuthProvider";
 
+const shippori = Shippori_Mincho({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-shippori",
+});
+
+const nun = Nunito({
+  subsets: ["latin"],
+  variable: "--font-nun",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,13 +28,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Providers>
-      <body
-        className={`antialiased`}
-      >
+        <body className={`${shippori.variable} ${nun.variable}`}>
         <Navbar />
-        {children}
-        
-      </body>
+          <main className={"pt-16"}>
+          {children}
+          </main>
+        </body>
       </Providers>
     </html>
   );
