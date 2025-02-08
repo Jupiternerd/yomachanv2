@@ -81,15 +81,14 @@ interface TiptapEditorProps {
   className?: string;
 }
 
-export default function TiptapEditor({ 
-  initialContent = '<p>Start typing...</p>', 
+export default function TiptapEditor({
   onUpdate,
   className = ''
 }: TiptapEditorProps) {
+  "use no memo";
   const editor = useEditor({
     extensions: [StarterKit],
     immediatelyRender: false,
-    content: initialContent,
     editorProps: {
       attributes: {
         class: 'prose prose-sm sm:prose lg:prose-lg xl:prose-2xl m-5 focus:outline-none text-black',

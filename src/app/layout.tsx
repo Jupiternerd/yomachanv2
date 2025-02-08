@@ -29,6 +29,10 @@ export default function RootLayout({
     <html lang="en">
       <Providers>
         <body className={`${shippori.variable} ${nun.variable}`}>
+        <script
+          crossOrigin="anonymous"
+          src="//unpkg.com/react-scan/dist/auto.global.js"
+        />
         <Navbar />
           <main className={"pt-16"}>
           {children}

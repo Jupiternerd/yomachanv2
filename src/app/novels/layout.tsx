@@ -1,5 +1,4 @@
-import { redirect } from "next/navigation";
-export default async function ProtectedLayout({
+export default async function NovelLayout({
   children,
 }: {
   children: React.ReactNode;

@@ -2,6 +2,7 @@
 
 import { signIn, signOut, useSession } from "next-auth/react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import Link from "next/link";
 
 export default function UserBar() {
   const { data: session } = useSession();
@@ -17,7 +18,7 @@ export default function UserBar() {
             </AvatarFallback>
           </Avatar>
           <div className="flex flex-col">
-            <span className="text-sm font-medium">{session.user?.name}</span>
+            <Link href= "/profile" className="text-sm font-medium hover:text-gray-500">{session.user?.name}</Link>
             <button 
               onClick={() => signOut()} 
               className="text-start text-xs text-muted-foreground hover:text-red-500 transition-colors"
